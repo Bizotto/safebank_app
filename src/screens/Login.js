@@ -4,15 +4,27 @@ import {
   Text,
   StyleSheet,
   TouchableOpacity,
+  Image,
+  ImageBackground,
 } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 import {colors} from '../colors/Colors';
 import {Input} from '../components/Input';
+import logo from '../images/saBanklogo.png';
 
 export const Login = () => {
   const [user, setUser] = useState(user);
   const [pass, setPass] = useState(pass);
   return (
     <View style={styles.container}>
+      <LinearGradient
+        colors={['#4c666f', '#3b5998', '#192f6a']}
+        style={styles.backgroundImage}
+      />
+
+      <View>
+        <Image style={styles.logoStyle} source={logo}></Image>
+      </View>
       <Text style={styles.titleGG}>Seja Bem-vindo!!</Text>
 
       <View style={{width: '100%'}}>
@@ -22,13 +34,13 @@ export const Login = () => {
           setValue={setUser}
           placeholder="Digite seu e-mail"
         />
-        <Input text="Senha"
+        <Input
+          text="Senha"
           value={pass}
           setValue={setPass}
           placeholder="Digite sua senha"
           isSecure
-          />
-        
+        />
       </View>
 
       <TouchableOpacity
@@ -46,17 +58,21 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.backPurple,
     alignItems: 'center',
-    justifyContent: 'space-between',
-    fontFamily: 'scada'
+    justifyContent: 'space-around',
+    fontFamily: 'scada',
   },
   titleGG: {
     textAlign: 'center',
     color: colors.textColor,
     fontSize: 25,
     fontFamily: 'Scada',
-    marginTop: 20,
+    marginTop: 5,
   },
-
+  logoStyle: {
+    marginTop: 5,
+    width: 100,
+    height: 100,
+  },
   buttonStyle: {
     padding: 'center',
   },
@@ -72,5 +88,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'purple',
 
     marginBottom: 20,
+  },
+
+  backgroundImage: {
+    width: 100,
+    height: 100,
   },
 });
