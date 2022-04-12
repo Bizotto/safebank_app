@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React, {useState} from 'react';
 import {
   View,
@@ -13,14 +14,15 @@ import {Input} from '../components/Input';
 import logo from '../images/saBanklogo.png';
 
 export const Login = () => {
+  const navigation = useNavigation()
   const [user, setUser] = useState(user);
-  const [pass, setPass] = useState(pass);
+  const [password, setPassword] = useState(password);
   return (
     <View style={styles.container}>
-      <LinearGradient
-        colors={['#4c666f', '#3b5998', '#192f6a']}
+      {/* <LinearGradient
+        colors={['#25001C', '#62315E', '#510151']}
         style={styles.backgroundImage}
-      />
+      /> */}
 
       <View>
         <Image style={styles.logoStyle} source={logo}></Image>
@@ -36,8 +38,8 @@ export const Login = () => {
         />
         <Input
           text="Senha"
-          value={pass}
-          setValue={setPass}
+          value={password}
+          setValue={setPassword}
           placeholder="Digite sua senha"
           isSecure
         />
@@ -45,8 +47,7 @@ export const Login = () => {
 
       <TouchableOpacity
         style={styles.button}
-        title="Registrar"
-        onPress={() => console.warn(user)}>
+        onPress={() => navigation.navigate('Home')}>
         <Text style={styles.buttonText}>CONTINUAR</Text>
       </TouchableOpacity>
     </View>
@@ -86,10 +87,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'purple',
-
-    marginBottom: 20,
+    marginBottom: 10,
   },
-
   backgroundImage: {
     width: 100,
     height: 100,
