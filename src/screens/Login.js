@@ -1,4 +1,4 @@
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
 import {
   View,
@@ -14,7 +14,7 @@ import {Input} from '../components/Input';
 import logo from '../images/saBanklogo.png';
 
 export const Login = () => {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
   const [user, setUser] = useState(user);
   const [password, setPassword] = useState(password);
   return (
@@ -50,6 +50,14 @@ export const Login = () => {
         onPress={() => navigation.navigate('Home')}>
         <Text style={styles.buttonText}>CONTINUAR</Text>
       </TouchableOpacity>
+      
+      <View>
+        <TouchableOpacity onPress={() => navigation.navigate('Registration')}>
+          <Text style={{color: colors.registrationColor}}>
+            Doesn't have an account? Register now.
+          </Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
