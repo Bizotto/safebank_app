@@ -50,7 +50,7 @@ export const Login = () => {
         onPress={() => navigation.navigate('Home')}>
         <Text style={styles.buttonText}>CONTINUAR</Text>
       </TouchableOpacity>
-      
+
       <View>
         <TouchableOpacity onPress={() => navigation.navigate('Registration')}>
           <Text style={{color: colors.registrationColor}}>
@@ -68,13 +68,11 @@ const styles = StyleSheet.create({
     backgroundColor: colors.backPurple,
     alignItems: 'center',
     justifyContent: 'space-around',
-    fontFamily: 'scada',
-  },
+},
   titleGG: {
     textAlign: 'center',
     color: colors.textColor,
     fontSize: 25,
-    fontFamily: 'Scada',
     marginTop: 5,
   },
   logoStyle: {
