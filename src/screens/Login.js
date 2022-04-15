@@ -19,10 +19,6 @@ export const Login = () => {
   const [password, setPassword] = useState(password);
   return (
     <View style={styles.container}>
-      {/* <LinearGradient
-        colors={['#25001C', '#62315E', '#510151']}
-        style={styles.backgroundImage}
-      /> */}
 
       <View>
         <Image style={styles.logoStyle} source={logo}></Image>
@@ -31,13 +27,11 @@ export const Login = () => {
 
       <View style={{width: '100%'}}>
         <Input
-          text="E-mail"
           value={user}
           setValue={setUser}
           placeholder="Digite seu e-mail"
         />
         <Input
-          text="Senha"
           value={password}
           setValue={setPassword}
           placeholder="Digite sua senha"

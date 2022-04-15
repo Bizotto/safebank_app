@@ -15,7 +15,7 @@ export const Home = () => {
 
   return (
     <View style={styles.container} >
-      <Text style={styles.textColor} >OIOIOIOIOIOIOIOI</Text>
+      <Text style={styles.textColor} >Here We show Passwords</Text>
     </View>
   );
 };

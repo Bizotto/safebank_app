@@ -16,12 +16,37 @@ import logo from '../images/saBanklogo.png';
 
 export const Registration = ({name}) => {
   const navigation = useNavigation();
+  const [makeUser, setMakeUser] = useState(makeUser);
+  const [makePassword, setMakePassword] = useState(makePassword);
+  const [confirmPassword, setConfirmPassword] = useState(confirmPassword);
+
   return (
     <View style={styles.container}>
       <View>
         <Image style={styles.registrationLogo} source={logo}></Image>
       </View>
-      <Text style={styles.textTitle} >Sign Up</Text>
+
+      <Text style={styles.textTitle}>Cadastre-se</Text>
+
+      <View style={{width: '100%'}}>
+        <Input
+          value={makeUser}
+          setValue={setMakeUser}
+          placeholder={'Digite seu email ou celular'}
+        />
+        <Input
+          value={makePassword}
+          setValue={setMakePassword}
+          placeholder={'Digite sua senha'}
+        />
+        <Input
+          value={confirmPassword}
+          setValue={setConfirmPassword}
+          placeholder={'Confirme sua senha'}
+        />
+      </View>
+
+      <TouchableOpacity></TouchableOpacity>
     </View>
   );
 };
@@ -46,8 +71,8 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
   },
-  textTitle:{
+  textTitle: {
     fontSize: 23,
     color: colors.textColor,
-  }
+  },
 });
