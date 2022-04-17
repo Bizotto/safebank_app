@@ -10,8 +10,6 @@ import {
 } from 'react-native';
 import {colors} from '../colors/Colors';
 import {Input} from '../components/Input';
-import {Routes} from '../routes';
-import {Login} from './Login';
 import logo from '../images/saBanklogo.png';
 
 export const Registration = ({name}) => {
@@ -46,7 +44,11 @@ export const Registration = ({name}) => {
         />
       </View>
 
-      <TouchableOpacity></TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Home')}
+        style={styles.button}>
+        <Text style={styles.buttonText}>CONTINUAR!!</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -56,6 +58,9 @@ const styles = StyleSheet.create({
     backgroundColor: colors.backPurple,
     alignItems: 'center',
     justifyContent: 'space-around',
+  },
+  buttonText: {
+    color: '#fff',
   },
   button: {
     width: '80%',
