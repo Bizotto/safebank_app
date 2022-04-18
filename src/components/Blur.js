@@ -1,9 +1,13 @@
-import {BlurView, VibrancyView} from '@react-native-community/blur';
+import React from 'react';
+import {Text, View} from 'react-native';
+import {BlurView} from 'expo-blur';
 
-export const blur = () => {
+export const Blur = () => {
   return (
-    <Gradient>
-      <BlurView intensity={100}>{children}</BlurView>
-    </Gradient>
+    <BlurView intensity={100}>
+      <View style={{backgroundColor: 'red'}}>
+        <Text>Olá</Text>
+      </View>
+    </BlurView>
   );
 };
