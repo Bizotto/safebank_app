@@ -9,27 +9,41 @@ import {
   ImageBackground,
 } from 'react-native';
 import {colors} from '../colors/Colors';
+import {Blur} from '../components/Blur';
 
 export const Home = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.container} >
-      <Text style={styles.textColor} >Here We show Passwords</Text>
+    <View style={styles.container}>
+      <Text style={styles.textColor}>Here We show Passwords</Text>
+      <View>
+        <Blur>
+          <TouchableOpacity style={styles.buttonPass}>
+            <Text style={styles.buttonText}>aaaaaaaaaaaaa</Text>
+          </TouchableOpacity>
+        </Blur>
+      </View>
     </View>
   );
 };
 const styles = StyleSheet.create({
-container:{
-backgroundColor: colors.backPurple,
-flex:1,
-alignItems:'center',
-justifyContent:'space-around'
-
-
-},
-textColor:{
-  color: colors.textColor,
-}
-
-})
+  container: {
+    backgroundColor: colors.backPurple,
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'space-around',
+  },
+  backBar: {},
+  buttonPass: {
+    paddingVertical: 10,
+    width: '40%',
+    borderRadius: 10,
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end',
+    backgroundColor: 'purple',
+  },
+  textColor: {
+    color: colors.textColor,
+  },
+});
