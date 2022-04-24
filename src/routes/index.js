@@ -12,10 +12,10 @@ export const Routes = () => {
   return (
     <NavigationContainer>
       <Navigator screenOptions={{headerShown: false}}>
-        <Screen name={'Blur'} component={Blur} />
         <Screen name={'Login'} component={Login} />
         <Screen name={'Registration'} component={Registration} />
         <Screen name={'Home'} component={Home} />
+        {/* <Screen name={'Blur'} component={Blur} /> */}
       </Navigator>
     </NavigationContainer>
   );

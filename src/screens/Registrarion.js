@@ -36,11 +36,13 @@ export const Registration = ({name}) => {
           value={makePassword}
           setValue={setMakePassword}
           placeholder={'Digite sua senha'}
+          isSecure
         />
         <Input
           value={confirmPassword}
           setValue={setConfirmPassword}
           placeholder={'Confirme sua senha'}
+          isSecure
         />
       </View>
 
