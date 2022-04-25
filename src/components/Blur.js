@@ -6,7 +6,6 @@ export const Blur = () => {
   return (
     <BlurView intensity={100}>
       <View style={{backgroundColor: 'red'}}>
-        <Text>Olá</Text>
       </View>
     </BlurView>
   );

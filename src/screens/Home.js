@@ -12,17 +12,13 @@ import {colors} from '../colors/Colors';
 import {Blur} from '../components/Blur';
 
 export const Home = () => {
-  const navigation = useNavigation();
-
   return (
     <View style={styles.container}>
       <Text style={styles.textColor}>Here We show Passwords</Text>
       <View>
-        <Blur>
-          <TouchableOpacity style={styles.buttonPass}>
-            <Text style={styles.buttonText}>aaaaaaaaaaaaa</Text>
-          </TouchableOpacity>
-        </Blur>
+        <TouchableOpacity style={styles.buttonPass}>
+          <Text style={styles.buttonText}>oioi</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
