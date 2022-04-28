@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     padding: 'center',
   },
   buttonText: {
-    color: '#fff',
+    color: colors.buttonTextColor,
   },
   button: {
     width: '80%',

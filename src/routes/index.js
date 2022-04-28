@@ -4,7 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Login} from '../screens/Login';
 import {Registration} from '../screens/Registrarion';
 import {Home} from '../screens/Home';
-import { Blur } from '../components/Blur';
+// import { Blur } from '../components/Blur';
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
