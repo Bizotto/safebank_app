@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Login} from '../screens/Login';
 import {Registration} from '../screens/Registrarion';
 import {Home} from '../screens/Home';
+import {NewPassword} from '../screens/NewPassword';
 // import { Blur } from '../components/Blur';
 
 const {Navigator, Screen} = createNativeStackNavigator();
@@ -15,6 +16,8 @@ export const Routes = () => {
         <Screen name={'Login'} component={Login} />
         <Screen name={'Registration'} component={Registration} />
         <Screen name={'Home'} component={Home} />
+        <Screen name={'NewPassword'} component={NewPassword} />
+
         {/* <Screen name={'Blur'} component={Blur} /> */}
       </Navigator>
     </NavigationContainer>

@@ -1,17 +1,20 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {colors} from '../colors/Colors';
 
-
 export const Home = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
+      <View>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('NewPassword')}
+          style={styles.buttonPass}>
+          <Text style={styles.buttonText}>Novas credencias</Text>
+        </TouchableOpacity>
+      </View>
+
       <View>
         <TouchableOpacity style={styles.buttonPass}>
           <Text style={styles.buttonText}>Facebook</Text>
